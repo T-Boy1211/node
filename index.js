@@ -9,60 +9,91 @@ app.set("view engine", "ejs");
 const allStudent = [
   {
     id: 1,
-    name: "ajirogba",
-    emaail: "ajirogba@gmail.com",
+    name: 'Ajirogba',
+    email: 'ajirogba@gmail.com',
+    phone: +2348123456789,
+    cuorse: 'B.Sc',
+    State: 'Oyo'
   },
   {
     id: 2,
-    name: "ajirogba",
-    emaail: "ajirogba@gmail.com",
+    name: 'Adeleke',
+    email: 'adeleke@yahoo.com',
+    phone: +2349160125899,
+    cuorse: 'B.Tech',
+    State: 'Osun'
   },
   {
     id: 3,
-    name: "ajirogba",
-    emaail: "ajirogba@gmail.com",
+    name: 'Adeyemi',
+    email: 'adeyemi@gmail.com',
+    phone: +2348160175299,
+    cuorse: 'Computer Engineering',
+    State: 'Ogun'
   },
   {
     id: 4,
-    name: "ajirogba",
-    emaail: "ajirogba@gmail.com",
+    name: 'Adeyanju',
+    email: 'adeyanju@gmail.com',
+    phone: +2349965125439,
+    cuorse: 'Computer Science',
+    State: 'Ondo'
   },
   {
     id: 5,
-    name: "ajirogba",
-    emaail: "ajirogba@gmail.com",
+    name: 'Aderojo',
+    email: 'aderojo@gmail.com',
+    phone: +23491683258652,
+    course: 'Mechatronics Engineering',
+    State: 'Lagos'
   },
   {
     id: 6,
-    name: "ajirogba",
-    emaail: "ajirogba@gmail.com",
+    name: 'Ojoade',
+    email: 'ojoade@gmail.com',
+    phone: +2349116268503,
+    course: 'Mechanical Engineering',
+    state: 'Imo'
   },
   {
     id: 7,
-    name: "ajirogba",
-    emaail: "ajirogba@gmail.com",
+    name: 'Ajobade',
+    emaail: 'ajobade@yahoo.com',
+    phone: +2349122443379,
+    cuorse: 'Architectural Enginerring',
+    State: 'Kwara'
   },
   {
     id: 8,
-    name: "ajirogba",
-    emaail: "ajirogba@gmail.com",
+    name: 'Imade',
+    email: 'imade@yahoo.com',
+    phone: +2349154355650,
+    course: 'Medicine',
+    State: 'Abia'
   },
   {
     id: 9,
-    name: "ajirogba",
-    emaail: "ajirogba@gmail.com",
+    name: 'Adisarojo',
+    email: 'adisarojo@yahoo.com',
+    phone: +2349163489863,
+    course: 'Biochemistry',
+    State: 'Benue'
   },
   {
     id: 10,
-    name: "ajirogba",
-    emaail: "ajirogba@gmail.com",
+    name: 'Oyediran',
+    email: 'oyediran@yahoo.com',
+    phone: +2349167452429,
+    course: 'Chemiccal Engineering'
   },
 ];
 
 const score = 40
+const date = new Date();
 
 app.get("/ejs", (req, res) => {
-  res.render("index.ejs", {
+  res.render(__dirname + "/index.ejs", {
+    date,
     allStudent,
     score,
   });

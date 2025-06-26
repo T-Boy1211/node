@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Welcometo Node class</h1>
-  <h1><%= date %></h1> 
-  <h1><%= stud.course %></h1>
-  <% if (stud.course === 76) { %>
-    <p>Hi, you are in the right course</p>
-  <% } else { %>
-    <p>Hi, you are in the wrong course</p>
-  <% } %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My EJS App</title>
+  </head>
+  <style>
+    h1 {
+      color: rgb(104, 17, 161);
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      font-family: sans-serif;
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+    p {
+      color: blue;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <body>
+    <h1>Welcome to My EJS App</h1>
 
-  <% if (score>=0 && score<40) { %>
-    <p><%= score %> implies failure</p>
-  <% } else if (score>=40 && score<60) { %>
-    <p><%= score %> implies pass</p>
-  <% } %>
+    <h1><%= date %></h1>
 
-  <% for( let index = 0; index < 5; index++ ) { %>
-    <h1><%= index %></h1>
-  <% } %>
-</body>
+    <%# for( let index = 0; index < allStudent.length; index++ ) { %>
+    <%# } %>
+    <%# allStudent.forEach(element => { %>
+      <h1><%#= allStudent %></h1>
+    <%# }) %>
+
+    <% for( let index = 1; index < 10; index++ ) { %>
+    <span><%= index %></span>
+    <% if (index % 3 === 0 && index % 2 === 0) { %>
+      <p><%= index %> is divisible by 3 and 2</p>
+    <% } else if (index % 3 === 0) { %>
+      <p><%= index %> is divisible by 3</p>
+    <% } else if (index % 2 === 0) { %>
+      <p><%= index %> is divisible by 2</p>
+    <% } else { %>
+      <p><%= index %> is only divisible by 1</p>
+    <% } %>
+    <% } %>
+  </body>
 </html>
