@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Welcometo Node class</h1>
+  <h1><%= date %></h1> 
+  <h1><%= stud.course %></h1>
+  <% if (stud.course === 76) { %>
+    <p>Hi, you are in the right course</p>
+  <% } else { %>
+    <p>Hi, you are in the wrong course</p>
+  <% } %>
+
+  <% if (score>=0 && score<40) { %>
+    <p><%= score %> implies failure</p>
+  <% } else if (score>=40 && score<60) { %>
+    <p><%= score %> implies pass</p>
+  <% } %>
+
+  <% for( let index = 0; index < 5; index++ ) { %>
+    <h1><%= index %></h1>
+  <% } %>
+</body>
+</html>

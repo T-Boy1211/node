@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
+const ejs = require("ejs");
+// app.use(express.json)
+const port = 7745;
 
-const port = 7725;
+app.set("view engine", "ejs");
 
 const allStudent = [
   {
@@ -56,6 +59,15 @@ const allStudent = [
   },
 ];
 
+const score = 40
+
+app.get("/ejs", (req, res) => {
+  res.render("index.ejs", {
+    allStudent,
+    score,
+  });
+});
+
 app.get("/api", (req, res) => {
   res.send(allStudent);
 });
@@ -64,14 +76,8 @@ app.get("/", (req, res) => {
   res.send("Welcome to my Node server");
 });
 
-// app.get('/api', (req, res)=>{
-//   try {
-//     res.status(201).json((message: allStudent))
-//   } catch (error) {
-//     res.send(503).json((message: error))
-//   }
-// })
-
 app.listen(port, () => {
   console.log(`Running at port ${port}`);
 });
+
+// module.exports = app;
