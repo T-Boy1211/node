@@ -20,6 +20,16 @@
       align-items: center;
       justify-content: center;
     }
+
+    legend{
+      color: chocolate;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      gap: 20px;
+      font-size: 1rem;
+      font-family: sans-serif;
+    }
   </style>
   <body>
     <h1>Welcome to My EJS App</h1>
@@ -29,11 +39,11 @@
     <%# for( let index = 0; index < allStudent.length; index++ ) { %>
     <%# } %>
     <%# allStudent.forEach(element => { %>
-      <h1><%#= allStudent %></h1>
+      <legend><%= allStudent %></legend>
     <%# }) %>
 
     <% for( let index = 1; index < 10; index++ ) { %>
-    <span><%= index %></span>
+
     <% if (index % 3 === 0 && index % 2 === 0) { %>
       <p><%= index %> is divisible by 3 and 2</p>
     <% } else if (index % 3 === 0) { %>
